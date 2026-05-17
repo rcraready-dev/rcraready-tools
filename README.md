@@ -1,8 +1,8 @@
 # RCRAReady Tools
 
-Open-source reference utilities for common EPA RCRA hazardous waste compliance workflows.
+Open-source TypeScript utilities for common EPA RCRA hazardous waste compliance workflows.
 
-RCRAReady builds hazardous waste compliance software for EHS managers, operations leaders, and consultants. This repository contains small, dependency-light utilities that mirror public reference tools available at [rcraready.com](https://rcraready.com/).
+RCRAReady builds hazardous waste compliance software for EHS managers, operations leaders, and consultants. This repository contains small, dependency-light helpers that mirror public reference tools available at [rcraready.com](https://rcraready.com/).
 
 ## What's Included
 
@@ -20,13 +20,13 @@ Use the free hosted versions here:
 - [RCRA hazardous waste codes lookup](https://rcraready.com/tools/hazardous-waste-codes)
 - [EPA ID lookup](https://rcraready.com/tools/epa-id-lookup)
 
-## Install
+## Use From Source
+
+This package is not published to a registry yet. Until it is published, install from GitHub or copy the TypeScript helpers directly from `src/`.
 
 ```bash
-npm install @rcraready/tools
+bun add github:rcraready-dev/rcraready-tools
 ```
-
-This package is not published yet. Until it is published, copy the TypeScript helpers directly from `src/` or install from GitHub.
 
 ## Example
 
