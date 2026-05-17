@@ -32,10 +32,10 @@
   "types": "./src/index.ts",
   "scripts": {
     "check": "tsc --noEmit",
-    "test": "bun test"
+    "test": "node --import tsx --test test/**/*.test.ts"
   },
   "devDependencies": {
-    "@types/bun": "^1.2.14",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }
 }
