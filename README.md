@@ -1,35 +1,60 @@
-# rcraready-tools
+# RCRAReady Tools
 
-Public tools available on [https://rcraready.com](https://rcraready.com)
+Open-source reference utilities for common EPA RCRA hazardous waste compliance workflows.
 
-RCRAReady is the automated compliance platform for EHS managers, operations leaders, and consultants managing hazardous waste. We also offer free tools help the community stay compliant with EPA RCRA regulations.
+RCRAReady builds hazardous waste compliance software for EHS managers, operations leaders, and consultants. This repository contains small, dependency-light utilities that mirror public reference tools available at [rcraready.com](https://rcraready.com/).
 
-## 🛠️ Public Compliance Tools
+## What's Included
 
-We provide several free tools to help you navigate RCRA complexity:
+- Federal generator category classification for VSQG, SQG, and LQG thresholds
+- Central accumulation area deadline calculations for LQG and SQG facilities
+- Satellite accumulation area three-day move deadline helper
+- Source notes for the federal regulations behind each helper
 
-### 📊 [Generator Category Calculator](https://rcraready.com/tools/epa-generator-status-classifier)
-Quickly determine if you are a **Very Small Quantity Generator (VSQG)**, **Small Quantity Generator (SQG)**, or **Large Quantity Generator (LQG)** based on your monthly hazardous waste generation.
-- **LQG**: > 1,000 kg/month 
-- **SQG**: 100 kg to 1,000 kg/month
-- **VSQG**: < 100 kg/month
+## Hosted Tools
 
-### ⏰ [Accumulation Deadline Tracker](https://rcraready.com/tools/rcra-storage-deadline-calculator)
-Never miss an EPA deadline again. Calculate your container accumulation limits based on your generator status:
-- **90 days** for LQGs
-- **180 days** for SQGs
-- **270 days** for VSQGs
+Use the free hosted versions here:
 
-### 🔍 [RCRA Waste Code Search](https://rcraready.com/tools/hazardous-waste-codes)
-Instantly lookup F, K, P, and U-listed waste codes along with D-code characteristic definitions.
+- [RCRA generator status classifier](https://rcraready.com/tools/epa-generator-status-classifier)
+- [RCRA storage deadline calculator](https://rcraready.com/tools/rcra-storage-deadline-calculator)
+- [RCRA hazardous waste codes lookup](https://rcraready.com/tools/hazardous-waste-codes)
+- [EPA ID lookup](https://rcraready.com/tools/epa-id-lookup)
 
----
+## Install
 
-## 🚀 Why RCRAReady?
+```bash
+npm install @rcraready/tools
+```
 
-- **Inspector-Ready Audit Trails**: Maintain 3+ years of immutable history.
-- **Automated Alerts**: Get SMS and email notifications before deadlines expire.
-- **Centralized Management**: Visibility across multiple facilities and buildings.
-- **Simplified Workflows**: Replace complex spreadsheets with a modern, mobile-friendly interface.
+This package is not published yet. Until it is published, copy the TypeScript helpers directly from `src/` or install from GitHub.
 
-**Learn more at [rcraready.com](https://rcraready.com)**
+## Example
+
+```ts
+import {
+  calculateAccumulationDeadline,
+  classifyGeneratorStatus,
+} from '@rcraready/tools';
+
+const status = classifyGeneratorStatus({
+  nonAcuteHazardousWasteKg: 425,
+});
+
+const deadline = calculateAccumulationDeadline({
+  generatorCategory: status.category,
+  accumulationStartDate: '2026-05-17',
+});
+
+console.log(status.category); // "SQG"
+console.log(deadline.deadlineDate); // "2026-11-13"
+```
+
+## Regulatory Scope
+
+These helpers cover selected federal RCRA rules under 40 CFR Parts 261 and 262. They are not a substitute for facility-specific legal, environmental, or regulatory advice. State authorized programs may be more stringent than the federal baseline.
+
+See [docs/regulatory-sources.md](docs/regulatory-sources.md) for citations.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
