@@ -31,7 +31,7 @@ The helper intentionally treats several thresholds exactly as written in the fed
 
 - [40 CFR 262.17(a)](https://www.ecfr.gov/current/title-40/section-262.17#p-262.17(a)): LQG 90-day accumulation conditions.
 - [40 CFR 262.16(b)](https://www.ecfr.gov/current/title-40/section-262.16#p-262.16(b)): SQG 180-day accumulation conditions.
-- [40 CFR 262.16(d)](https://www.ecfr.gov/current/title-40/section-262.16#p-262.16(d): SQG 270-day accumulation option when waste must be transported more than 200 miles for off-site treatment, storage, or disposal.
+- [40 CFR 262.16(d)](https://www.ecfr.gov/current/title-40/section-262.16#p-262.16(d)): SQG 270-day accumulation option when waste must be transported more than 200 miles for off-site treatment, storage, or disposal.
 - [40 CFR 262.15(a)(6)](https://www.ecfr.gov/current/title-40/section-262.15#p-262.15(a)(6)): Satellite accumulation area excess waste dating and three-day removal requirement.
 
 ### Central Accumulation Areas
