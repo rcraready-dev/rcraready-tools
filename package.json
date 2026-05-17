@@ -1,0 +1,41 @@
+{
+  "name": "@rcraready/tools",
+  "version": "0.1.0",
+  "description": "Open-source TypeScript helpers for EPA RCRA hazardous waste generator status and accumulation deadlines.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://rcraready.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcraready-dev/rcraready-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rcraready-dev/rcraready-tools/issues"
+  },
+  "keywords": [
+    "rcra",
+    "hazardous-waste",
+    "epa",
+    "generator-status",
+    "accumulation-deadline",
+    "environmental-compliance"
+  ],
+  "files": [
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.14",
+    "typescript": "^5.8.3"
+  }
+}
